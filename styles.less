@@ -7,6 +7,9 @@
 @dark: darken(@medium, 15);
 @ultraDark: darken(@medium, 35);
 
+@darkGrey: #4f4f4f;
+@yellow: #efff00;
+
 @maxWidth: 1200px;
 
 @contentPadding: 10px;
@@ -16,6 +19,8 @@
 @generalPadding_8: 8px;
 @generalPadding_12: 12px;
 @generalPadding_16: 16px;
+
+@fontFamily: 'Shree Devanagari 714', ;
 
 img {
     max-width: 100%;
@@ -28,12 +33,13 @@ img {
     background-color: @ultraLight;
     padding: @generalPadding_8;
     font-size: 1.3em;
-    color: @ultraDark;
+    color: @darkGrey;
     align-content: center;
     max-width: @maxWidth;
     margin-left: auto;
     margin-right: auto;
     //border: 12px solid @light
+    font-family: 'Shree Devanagari 714';
 }
 /*Container in App*/
 .content {
@@ -43,19 +49,23 @@ img {
 div {
     background-color: @medium;
 }
+
+h1{
+    font-size: 2em;
+}
 //Directive-specific styling
 .directive {
     background-color: @ultraDark;
     padding: 12px;
     font-size: 1.3em;
-    color: @ultraLight;
+    color: @darkGrey;
 }
 
 .tableDiv {
     //padding-left: @generalPadding_8;
-    padding-top: @generalPadding_8;
-    padding-bottom: @generalPadding_8;
-    background-color: @ultraLight;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    // background-color: @yellow;
     overflow: hidden;
 }
 
@@ -64,18 +74,20 @@ div {
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    border: 2px solid @ultraLight;
+    // border: 2px solid @ultraLight;
     width: (100% / 4 * 3); // 100% / antal kollonner
     padding: 4px;
+    background-color: @yellow;
 }
 .col_1of4 {
     float:left;
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    border: 2px solid @ultraLight;
+    // border: 2px solid @ultraLight;
     width: (100% / 4); // 100% / antal kollonner
     padding: 4px;
+    background-color: @yellow;
 }
 //BOOTSTRAP MODIFICATIONS
 .navbar-default .navbar-brand, .navbar-default .navbar-brand{color:@ultraDark;}
