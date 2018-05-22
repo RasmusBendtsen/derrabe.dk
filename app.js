@@ -3,7 +3,10 @@ var todoApp = angular.module('MyApp', ['firebase']);
 //CONTROLLERS
 
 todoApp.controller('mainController', ['$scope', '$firebaseArray', '$firebaseAuth', '$log', function ($scope, $firebaseArray, $firebaseAuth, $log) {
-$scope.thisIsMyController = "this is my controller"
+$scope.thisIsMyController = "this is my controller";
+
+var w = $('#widget');
+w.addClass('dark');
     
 }]);
 

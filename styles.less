@@ -9,6 +9,7 @@
 
 @darkGrey: #4f4f4f;
 @yellow: #efff00;
+@ravenBlack: #232323;
 
 @maxWidth: 1200px;
 
@@ -58,47 +59,80 @@ h1{
     background-color: @ultraDark;
     padding: 12px;
     font-size: 1.3em;
-    color: @darkGrey;
+    color: @ultraLight;
 }
 
 .tableDiv {
     //padding-left: @generalPadding_8;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    // background-color: @yellow;
+    padding: 16px;
+    background-color: @ravenBlack;
     overflow: hidden;
+    margin-top: 50px;
+}
+
+.col{
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 4px;
+    background-color: @ravenBlack;
+    color: @ultraLight;
+}
+
+.first_column{
+
+}
+
+.not_firstColumn{
+    padding-left: 16px;
 }
 
 .col_3of4 {
-    float:left;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    // border: 2px solid @ultraLight;
     width: (100% / 4 * 3); // 100% / antal kollonner
-    padding: 4px;
-    background-color: @yellow;
 }
+
+.col_2of4{
+    width: (100% / 4 * 2); // 100% / antal kollonner
+}
+
 .col_1of4 {
-    float:left;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    // border: 2px solid @ultraLight;
     width: (100% / 4); // 100% / antal kollonner
-    padding: 4px;
-    background-color: @yellow;
 }
+
+
+
 //BOOTSTRAP MODIFICATIONS
 .navbar-default .navbar-brand, .navbar-default .navbar-brand{color:@ultraDark;}
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{color:@ultraLight;}
 .navbar-default .navbar-nav>li>a {color: @ultraDark;}
 .navbar-default .navbar-nav>li>a:hover {color:@ultraLight;}
 
+
+// SOUNDCLOUD PLAYER
+.g-background-default,
+.sc-background-white,
+.sc-background-light,
+.dark{
+    background-color: #232323;
+}
+
+.widget {
+    border: 0px solid #e5e5e5;
+}
+
+.iframe{
+    height: 600px;
+}
+
+
 //MEDIA QUERIES SPECIFIC (BOOTSTRAP BASED)
 
 //Miinimum SIZE
 @media (max-width: 767px){ //mindre en 768 px width
+    .iframe{
+        height: 400px;
+    }
     .app { 
         font-size: 1.5em;
     }
@@ -107,16 +141,21 @@ h1{
         width: 100%;
     }
     .content {
-    background-color: @ultraLight;
     padding: @generalPadding_8;
     }
     .tableDiv {
     padding: @contentPaddingM10;
-    //padding-right: contentPaddingM10;
-    background-color: @ultraLight;
     overflow: hidden;
     }
 }
+
+//Miinimum SIZE
+@media (max-width: 460px){ //mindre en 768 px width
+    .iframe{
+        height: 200px;
+    }
+}
+
 @media (min-width: 768px){
     .container {
         width: 100%;
