@@ -10,6 +10,7 @@
 @darkGrey: #4f4f4f;
 @yellow: #efff00;
 @ravenBlack: #232323;
+@darkPurple: #900674;
 
 @maxWidth: 1200px;
 
@@ -27,13 +28,23 @@ img {
     max-width: 100%;
 }
 
+#rabeLogo{
+    background-image: url("http://derrabe.dk/Images/RabeLogo04Transparent.png");
+    width: 100%;
+    height: 262px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#rabeLogo:hover{
+    background-image: url("Images/RabeLogo04Transparent_Black.png");
+}
 
 //Body-element styling
 .app { 
     background-color: @dark;
     background-color: @ultraLight;
     padding: @generalPadding_8;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: @darkGrey;
     align-content: center;
     max-width: @maxWidth;
@@ -53,6 +64,7 @@ div {
 
 h1{
     font-size: 2em;
+    color: @darkPurple;
 }
 //Directive-specific styling
 .directive {
@@ -64,7 +76,7 @@ h1{
 
 .tableDiv {
     //padding-left: @generalPadding_8;
-    padding: 16px;
+    padding: 0px;
     background-color: @ravenBlack;
     overflow: hidden;
     margin-top: 50px;
@@ -75,9 +87,10 @@ h1{
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    padding: 4px;
+    padding: 16px;
     background-color: @ravenBlack;
     color: @ultraLight;
+    color: #209b92;
 }
 
 .first_column{
@@ -100,7 +113,10 @@ h1{
     width: (100% / 4); // 100% / antal kollonner
 }
 
+.rabeLogo:hover{
+    src: "Images/RabeLogo04Transparent_White.png";
 
+}
 
 //BOOTSTRAP MODIFICATIONS
 .navbar-default .navbar-brand, .navbar-default .navbar-brand{color:@ultraDark;}
@@ -121,24 +137,42 @@ h1{
     border: 0px solid #e5e5e5;
 }
 
-.iframe{
+.content>.iframe{
     height: 600px;
 }
+.col.iframeColumn{
+    background-color: #fff;
+    padding: 0 0 0 24px;
+}
 
+
+.fas{
+    float: left;
+    font-size: 3rem;
+    margin-right: 12px;
+    margin-top: 12px;
+    color: @darkPurple;
+}
 
 //MEDIA QUERIES SPECIFIC (BOOTSTRAP BASED)
 
 //Miinimum SIZE
 @media (max-width: 767px){ //mindre en 768 px width
-    .iframe{
+    .content>.iframe{
         height: 400px;
+    }
+    .col.iframeColumn {
+        background-color: #232323;
+        padding: 24px 0;
+        float:none;
+        width: 100%;
     }
     .app { 
         font-size: 1.5em;
     }
     .col {
-        float:none;
-        width: 100%;
+        //float:none;
+        width: 50%;
     }
     .content {
     padding: @generalPadding_8;
@@ -151,8 +185,12 @@ h1{
 
 //Miinimum SIZE
 @media (max-width: 460px){ //mindre en 768 px width
-    .iframe{
+    .content>.iframe{
         height: 200px;
+    }
+    .col {
+        float:none;
+        width: 100%;
     }
 }
 
